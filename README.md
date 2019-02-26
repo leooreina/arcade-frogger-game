@@ -18,3 +18,7 @@ the screen. This rare gem (if collected) will give you 20 points.
 will cross the screen. This very rare gem (if collected) will give you 100 points.
 - Every twenty six times you are able to collect a blue gem, a heart will cross
 the screen. This object (if collected) will give an extra life to you.
+
+Suggestions:
+
+If you have a suggestion about the game or detected some bug, please let me know =)

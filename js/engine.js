@@ -98,6 +98,8 @@ var Engine = (function(global) {
         player.update();
         gemBlue.update(dt);
         gemGreen.update(dt);
+        gemOrange.update(dt);
+        newHeart.update(dt);
         scorePlayer.update();
         life.update();
 
@@ -163,6 +165,8 @@ var Engine = (function(global) {
         player.render();
         gemBlue.render();
         gemGreen.render();
+        gemOrange.render();
+        newHeart.render();
         scorePlayer.render();
         life.render();
 
@@ -187,7 +191,9 @@ var Engine = (function(global) {
         'images/enemy-bug.png',
         'images/char-boy.png',
         'images/gem-blue.png',
-        'images/gem-green.png'
+        'images/gem-green.png',
+        'images/gem-orange.png',
+        'images/heart.png'
     ]);
     Resources.onReady(init);
 
@@ -197,3 +203,4 @@ var Engine = (function(global) {
      */
     global.ctx = ctx;
 })(this);
+

@@ -96,6 +96,12 @@ function checkCollectGem() {
     } else if (player.x < gemGreen.x + gemGreen.widthRect && player.x + player.widthRect > gemGreen.x && player.y < gemGreen.y + gemGreen.heightRect && player.y + player.heightRect > gemGreen.y) {
         gemGreen.update(); // retorna a gema a posição original dela no canvas
         return true;
+    } else if (player.x < gemOrange.x + gemOrange.widthRect && player.x + player.widthRect > gemOrange.x && player.y < gemOrange.y + gemOrange.heightRect && player.y + player.heightRect > gemOrange.y) {
+        gemOrange.update();
+        return true;
+    } else if (player.x < newHeart.x + newHeart.widthRect && player.x + player.widthRect > newHeart.x && player.y < newHeart.y + newHeart.heightRect && player.y + player.heightRect > newHeart.y) {
+        newHeart.update();
+        return true;
     }
 }
 
@@ -194,6 +200,21 @@ class Player {
                 scorePlayer.winningCount += 20; // Aumenta o score em 20 pontos para o player
             }
 
+            // Condição para a gema laranja aparecer (acontece a cada 25 gemas azuis coletadas)
+            if (scorePlayer.gemsCollected % 25 === 0) {
+                gemOrange.x = -widthSquare; // Posição horizontal da gema laranja
+                gemOrange.y = heightSquare - correctionHeight; // Posição vertical da gema laranja
+                scorePlayer.winningCount += 100; // Aumenta o score em 100 pontos para o player
+                
+            }
+
+            // Condição para o coração aparecer (acontece a cada 26 gemas azuis coletadas)
+            if (scorePlayer.gemsCollected % 26 === 0) {
+                newHeart.x = -widthSquare; // Posição horizontal do coração de vida
+                newHeart.y = heightSquare + (correctionHeight * 3.5); // Posição vertical do coração de vida
+                life.remainingLife += 1; // Aumenta a life em 1 para o player
+            }
+
         }
     }
 
@@ -238,7 +259,11 @@ class CollectableItems {
 
 gemBlue = new CollectableItems(); // instancia o objeto gema azul como um novo item coletável
 gemGreen = new CollectableItems(); // instancia o objeto gema verde como um novo item coletável
+gemOrange = new CollectableItems(); // instancia o objeto gema laranja como um novo item coletável
+newHeart = new CollectableItems(); // instancia o objeto coração como um novo item coletável
 gemGreen.sprite = 'images/gem-green.png'; // Altera a imagem para a gema verde no objeto gema verde
+gemOrange.sprite = 'images/gem-orange.png'; // Altera a imagem para a gema laranja no objeto gema laranja
+newHeart.sprite = 'images/heart.png'; // Altera a imagem para o coração no objeto novo coração
 
 // Classe que cria um Score para o player
 class Score {
@@ -273,6 +298,7 @@ class Deaths {
     }
 
     update() {
+
 
     }
 

@@ -14,3 +14,7 @@ Instructions to play:
 the screen. If you are able to collect them, you'll will score 4 points.
 - Every ten times you are able to collect a blue gem, a green gem will cross
 the screen. This rare gem (if collected) will give you 20 points.
+- Every twenty five times you are able to collect a blue gem, a orange gem
+will cross the screen. This very rare gem (if collected) will give you 100 points.
+- Every twenty six times you are able to collect a blue gem, a heart will cross
+the screen. This object (if collected) will give an extra life to you.

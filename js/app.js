@@ -263,7 +263,7 @@ gemOrange = new CollectableItems(); // instancia o objeto gema laranja como um n
 newHeart = new CollectableItems(); // instancia o objeto coração como um novo item coletável
 gemGreen.sprite = 'images/gem-green.png'; // Altera a imagem para a gema verde no objeto gema verde
 gemOrange.sprite = 'images/gem-orange.png'; // Altera a imagem para a gema laranja no objeto gema laranja
-newHeart.sprite = 'images/heart.png'; // Altera a imagem para o coração no objeto novo coração
+newHeart.sprite = 'images/Heart.png'; // Altera a imagem para o coração no objeto novo coração
 
 // Classe que cria um Score para o player
 class Score {
